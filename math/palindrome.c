@@ -1,3 +1,6 @@
+//PALINDROME
+
+
 bool isPalindrome(int x)
  { 
     if(x<0) 
