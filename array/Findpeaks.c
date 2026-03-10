@@ -1,4 +1,4 @@
-
+//FIND PEAKS
 int* findPeaks(int* mountain, int mountainSize, int* returnSize) {
  int* result = (int*)malloc(mountainSize * sizeof(int));
 int count = 0;
