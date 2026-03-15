@@ -20,7 +20,7 @@ int majorityElement(int* nums, int numsSize) {
         if(count==0){
             candi=nums[i];
         }
-        if(candi=nums[i]){
+        if(candi==nums[i]){
             count++;
         }
         else{
