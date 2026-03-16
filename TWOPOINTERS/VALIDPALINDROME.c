@@ -6,9 +6,8 @@ bool isPalindrome(char* s) {
     left++;
  while (left < right && !isalnum(s[right])) 
     right--;
-      char leftchar=s[left];
-      char rightchar=s[right];
-         if(tolower(leftchar)!=tolower(rightchar))  return false;   
+     
+         if(tolower(s[left])!=tolower(s[right]))  return false;   
              left++; 
 right--; 
 
