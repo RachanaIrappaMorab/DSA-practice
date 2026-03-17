@@ -4,7 +4,7 @@
  *     int val;
  *     struct ListNode *next;
  * };
- */
+ *///we have to declare evrything first 
 struct ListNode* deleteDuplicates(struct ListNode* head) {
     struct ListNode*curr= head;
     struct ListNode* temp=NULL;
