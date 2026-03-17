@@ -1,3 +1,6 @@
+//remove duplicates
+
+
 char* removeDuplicates(char* s) {
   int n=strlen(s);
   char * stack=(char*)malloc(n*sizeof(char));
