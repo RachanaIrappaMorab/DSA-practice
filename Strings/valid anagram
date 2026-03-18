@@ -1,0 +1,54 @@
+/* Anagram means if  two strings  have the same characters annd frequency(num of characters)  but possibly in different order 
+*/
+bool isAnagram(char* s, char* t) {
+
+    if(strlen(s)!=strlen(t))
+    return false;
+    int count[26]={0}; int index;
+    
+    for(int i=0;s[i]!='\0';i++){
+      s[i]=tolower(s[i]);//this will help if user gave upper case also then it iwll help 
+    
+        index=s[i]-'a';
+        count[index]++;
+        
+    }
+    for(int i=0;t[i]!='\0';i++){
+        t[i]=tolower(t[i]);
+        index=t[i]-'a';
+        count[index]--;
+        
+    }
+    for(int i=0;i<26;i++){
+        if(count[i]!=0)
+            return false;
+        
+       
+    }
+     return true;
+    
+}
+
+
+
+
+// another logic  
+//ok if we have alphabets the abpve solution works 100 percent but what if the user gave the inputs which consists of  other  symbols then  we have to use full ASCII logic 
+
+bool isAnagram(char* s, char* t) {
+    if(strlen(s)!=strlen(t))
+    return false ;
+    int count[256]={0};
+    for(int i=0;s[i]!='\0';i++){
+        count[s[i]]++;
+    }
+    for(int i=0;t[i]!='\0';i++){
+        count[t[i]]--;
+    }
+
+    for(int i=0;i<256;i++){
+        if(count[i]!=0)
+        return false;
+    }
+    return true;
+}
