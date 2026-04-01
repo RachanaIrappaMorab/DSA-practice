@@ -4,7 +4,9 @@
  *     int val;
  *     struct ListNode *next;
  * };
+ 
  */
+
 struct ListNode* reverseList(struct ListNode* head) {
     struct ListNode* prevnode,*currnode,*nextnode
     ;
