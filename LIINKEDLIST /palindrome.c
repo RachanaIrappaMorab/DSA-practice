@@ -5,6 +5,9 @@
  *     struct ListNode *next;
  * };
  */
+
+
+
 bool isPalindrome(struct ListNode* head) {
     int arr[100000];
     int n=0;
