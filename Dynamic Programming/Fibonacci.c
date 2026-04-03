@@ -1,4 +1,5 @@
 //using memoization technique 
+//using top down approach
 
 int dp[10000];
 int solve(int n){
