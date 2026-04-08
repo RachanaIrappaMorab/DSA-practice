@@ -1,0 +1,14 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        b=[]
+        for i in nums:
+            if i not in b:
+                b.append(i)
+            else:
+                b.remove(i)
+        return(b[0])
+        
