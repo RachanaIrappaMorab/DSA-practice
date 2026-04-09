@@ -1,0 +1,17 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        dic={}
+        for i in s:
+            dic[i]=dic.get(i,0)+1
+        dic1={}
+        for j in t:
+            dic1[j]=dic1.get(j,0)+1
+        if dic==dic1:
+            return True
+        else:
+            return False
