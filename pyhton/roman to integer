@@ -1,0 +1,30 @@
+
+def value(c):
+    if  c =="I":
+      return(1)
+    if  c =="V":
+      return(5)
+    if  c =="X":
+     return(10)
+    if c =="L":
+      return(50)
+    if c =="C":
+      return(100)
+    if c =="D":
+      return(500)
+    if c =="M":
+      return(1000)
+
+def romanInt(s):
+  tot=0
+  for i in range(len(s)-1):
+    curr=value(s[i])
+    next=value(s[i+1])
+    if curr < next:
+      tot-=curr
+    else:
+      tot+=curr
+  tot+=value(s[-1])
+  print(tot)
+
+romanInt("IX")
