@@ -1,0 +1,13 @@
+#3701
+
+nums=[100]
+a=nums[0::2]
+b=nums[1::2]
+sum=0
+sub=0
+for i in a:
+  sum+=i
+for i in b:
+  sub-=i
+print(sub+sum)
+
