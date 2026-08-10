@@ -11,4 +11,6 @@ class Solution(object):
                 if substring==substring[::-1]:
                     if len(substring)>len(long):
                         long=substring
+
+
         return long
