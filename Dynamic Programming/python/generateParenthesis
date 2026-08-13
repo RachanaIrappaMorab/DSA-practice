@@ -1,0 +1,21 @@
+class Solution(object):
+    def generateParenthesis(self, n):
+        result = []
+        current = ""
+        open = 0
+        close = 0
+
+        def recursive(current, open, close):
+            if len(current) == 2 * n:
+                result.append(current)
+                return
+
+            if open < n:
+                recursive(current + "(", open + 1, close)
+
+            if close < open:
+                recursive(current + ")", open, close + 1)
+
+        recursive(current, open, close)
+
+        return result
