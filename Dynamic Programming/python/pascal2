@@ -1,0 +1,19 @@
+class Solution(object):
+    def getRow(self, rowIndex):
+        """
+        :type rowIndex: int
+        :rtype: List[int]
+        """
+        if rowIndex==0:
+            return [1]
+        result=[[1]]
+        first=[1]
+        for i in range(1,rowIndex+1):
+            second=[1]
+            for i in range(len(first)-1):
+                T=first[i]+first[i+1]
+                second.append(T)
+            second.append(1)
+            result.append(second)
+            first=second
+        return  result[rowIndex]
