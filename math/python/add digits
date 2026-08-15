@@ -1,0 +1,16 @@
+class Solution(object):
+    def addDigits(self, num):
+        """
+        :type num: int
+        :rtype: int
+        """
+        arr=list(str(num))
+        while len(arr)>1:
+            result=0
+            for i in range(len(arr)):
+                result+=int(arr[i])
+            arr=list(str(result))
+        return int(arr[0])
+    
+        
+        
