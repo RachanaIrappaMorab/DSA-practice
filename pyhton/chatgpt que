@@ -1,0 +1,17 @@
+s="abcaefga"
+current=[]
+longest=[]
+for i in s:
+     if len(current)==0:
+         current.append(i)
+     elif i==current[0]:
+        current.append(i)
+     elif i not in current: 
+        current.append(i)
+     else:
+        while i in current:
+            current.pop(0)
+        current.append(i)
+     if len(current)>len(longest) and current[0]==current[-1]:
+        longest=current[:]
+print(longest)
